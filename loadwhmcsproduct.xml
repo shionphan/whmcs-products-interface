@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="plugin" group="content">
+	<name>Content - LoadWhmcsProduct</name>
+	<author>Joomla! Project</author>
+	<creationDate>2010-2-13</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>shionphan@126.com</authorEmail>
+	<authorUrl>http://www.joomla178.com</authorUrl>
+	<version>1.0</version>
+	<description>DESCRIPTION_TEXT</description>
+	<languages>
+		<language tag="zh-CN">zh-CN.plg_content_loadwhmcsproduct.ini</language>
+		<language tag="en-GB">en-GB.plg_content_loadwhmcsproduct.ini</language>
+	</languages>
+	<files>
+		<filename plugin="loadwhmcsproduct">loadwhmcsproduct.php</filename>
+		<filename plugin="loadwhmcsproduct">loadwhmcsproduct.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="url" type="text" label="SET_API_URL" description="SET_API_URL_TEXT"></field>
+				<field name="action" type="text" label="SET_API_ACTION" description="SET_API_ACTION_TEXT"></field>
+				<field name="identifier" type="text" label="SET_API_IDENTIFIER" description="SET_API_IDENTIFIER_TEXT"></field>
+				<field name="secret" type="text" label="SET_API_SECRET" description="SET_API_SECRET_TEXT"></field>				
+
+				<field name="name" type="radio" default="1" label="SET_SHOW_NAME" class="btn-group btn-group-yesno" description="SET_SHOW_NAME_TEXT">
+					<option value="1">YES</option>
+					<option value="0">NO</option>
+				</field>
+				<field name="description" type="radio" default="1" label="SET_SHOW_DESC" class="btn-group btn-group-yesno" description="SET_SHOW_DESC_TEXT">
+					<option value="1">YES</option>
+					<option value="0">NO</option>
+				</field>
+				<field name="module" type="radio" default="0" label="SET_SHOW_MODULE" class="btn-group btn-group-yesno" description="SET_SHOW_MODULE_TEXT">
+					<option value="1">YES</option>
+					<option value="0">NO</option>
+				</field>
+				<field name="paytype" type="radio" default="1" label="SET_SHOW_PAYTYPE" class="btn-group btn-group-yesno" description="SET_SHOW_PAYTYPE_TEXT">
+					<option value="1">YES</option>
+					<option value="0">NO</option>
+				</field>
+				<field name="pricing" type="radio" default="1" label="SET_SHOW_PRICING" class="btn-group btn-group-yesno" description="SET_SHOW_PRICING_TEXT">
+					<option value="1">YES</option>
+					<option value="0">NO</option>
+				</field>
+				<field name="customfields" type="radio" default="0" label="SET_SHOW_CUSTOMFIELDS" class="btn-group btn-group-yesno" description="SET_SHOW_CUSTOMFIELDS_TEXT">
+					<option value="1">YES</option>
+					<option value="0">NO</option>
+				</field>
+				<field name="configoptions" type="radio" default="0" label="SET_SHOW_CONFIGOPTIONS" class="btn-group btn-group-yesno" description="SET_SHOW_CONFIGOPTIONS_TEXT">
+					<option value="1">YES</option>
+					<option value="0">NO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
