@@ -1,5 +1,9 @@
 # Joomla plugin for getting all products from WHMCS
 
+## Update
+
+1. 2018-12-26 Create basic file.
+
 ## Stay tuned
 
 1. Create a API secret in WHMCS
