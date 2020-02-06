@@ -22,22 +22,12 @@
  
   if ($ca->isLoggedIn()) {
 
-  // Get url params
-  function is_set_param($param){
-    $current_url = $_SERVER["QUERY_STRING"];
-    $arr = explode('&',$current_url);
-    $value = '';
-    foreach ($arr as $k=>$v) {
-      $left_c = explode('=',$v);
-      if ($left_c[0] == $param) {
-        $value = $left_c[1];
-        break;
-      }
-    }
-    return $value;
-  }
-  // print_r(is_set_param('page'));
-
+  // url
+  $url = $_SERVER['QUERY_STRING'];
+  // page number
+  $pagenumber = $_GET['page'];
+  // page limit
+  $pagelimit = $_GET['itemlimit'];
   // Get Userid
   $userid = $ca->getUserID();
 
@@ -45,6 +35,7 @@
   $services = Capsule::table('tblhosting')
     ->where('userid', $userid)
     ->whereIn('domainstatus', ['Active', 'Completed'])
+    ->forPage($pagenumber, $pagelimit)
     ->orderBy('id', 'DESC')
     ->get();
 
@@ -61,7 +52,13 @@
   }
 
   // echo data as json
-  echo json_encode($products);
+  $result = array(
+    'msg' => 'ok',
+    'code' => 1,
+    'data' => $products
+  );
+  // echo data as json
+  echo json_encode($result);
 
 } else {
   $result = array(
