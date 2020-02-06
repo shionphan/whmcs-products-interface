@@ -16,7 +16,7 @@ Base on WHMCS 7.x
 
 ## IDEAS
 
-1. Create a custom php page in WHMCS;
+1. Create a custom php page in WHMCS; ([Creating Pages](https://developers.whmcs.com/advanced/creating-pages/))
 2. Echo json data by Capsule::table();
 3. Achieve user experience by requesting this interface asynchronously in clientareaproducts.tpl;
 
