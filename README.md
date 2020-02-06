@@ -2,23 +2,25 @@
 
 ## Update
 
-1. 2018-12-26 Create basic file.
+1. 2020-02-06 Create product demo file.
 
-## Stay tuned
+## USEAGE
 
-1. Create a API secret in WHMCS
-1. Get the data by WHMCS API [Link](https://developers.whmcs.com/api-reference/getproducts/)
-2. Creat a content plugin in Joomla by step 1
-3. Creat a article in Joomla and show the plugin data
+* Put the myproducts.php in the WHMCS root directory;
+* Visit https://yourdomain.com/myproducts.php;
+* Get the data as shown in the screenshot;
+* Use web front-end framework for development in clientareaproducts.tpl file. Maybe Vue and Angular are great framework;
+* Visit https://yourdomain.com/clientarea.php?action=products&page=1;
 
-## Schedule
+## IDEAS
 
-1. 2019-01 Begin
-2. 2019-03 Test
-3. 2019-04 Publish
+1. Create a custom php page in WHMCS;
+2. Echo json data by Capsule::table();
+3. Achieve user experience by requesting this interface asynchronously in clientareaproducts.tpl;
 
 ## Screen shot
 
-![screenshot-background](screen/screenshot-backgroud.png)
+![screenshot-background](screen/screenshot-1.jpg)
+![screenshot-background](screen/screenshot-2.jpg)
 
-Wish me luck
+Looking forward to more demos.
